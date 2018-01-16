@@ -7,23 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6500504B200E8DA7008E1CB9 /* CreateEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6500504A200E8DA7008E1CB9 /* CreateEntryViewController.swift */; };
 		65B2CCCF200E87FF00A47A06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B2CCCE200E87FF00A47A06 /* AppDelegate.swift */; };
-		65B2CCD1200E87FF00A47A06 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B2CCD0200E87FF00A47A06 /* ViewController.swift */; };
+		65B2CCD1200E87FF00A47A06 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B2CCD0200E87FF00A47A06 /* CollectionViewController.swift */; };
 		65B2CCD4200E87FF00A47A06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65B2CCD2200E87FF00A47A06 /* Main.storyboard */; };
 		65B2CCD7200E87FF00A47A06 /* wineCollector.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 65B2CCD5200E87FF00A47A06 /* wineCollector.xcdatamodeld */; };
 		65B2CCD9200E87FF00A47A06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65B2CCD8200E87FF00A47A06 /* Assets.xcassets */; };
 		65B2CCDC200E87FF00A47A06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65B2CCDA200E87FF00A47A06 /* LaunchScreen.storyboard */; };
+		65B2CCE4200E8C0900A47A06 /* redwine.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 65B2CCE3200E8C0900A47A06 /* redwine.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6500504A200E8DA7008E1CB9 /* CreateEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreateEntryViewController.swift; path = "../../../../../../../../Daniel/Library/Mobile Documents/com~apple~CloudDocs/App Development/Training/wineCollector/wineCollector/CreateEntryViewController.swift"; sourceTree = "<group>"; };
 		65B2CCCB200E87FF00A47A06 /* wineCollector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wineCollector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65B2CCCE200E87FF00A47A06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		65B2CCD0200E87FF00A47A06 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		65B2CCD0200E87FF00A47A06 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		65B2CCD3200E87FF00A47A06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		65B2CCD6200E87FF00A47A06 /* wineCollector.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = wineCollector.xcdatamodel; sourceTree = "<group>"; };
 		65B2CCD8200E87FF00A47A06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65B2CCDB200E87FF00A47A06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65B2CCDD200E87FF00A47A06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65B2CCE3200E8C0900A47A06 /* redwine.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = redwine.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +60,10 @@
 		65B2CCCD200E87FF00A47A06 /* wineCollector */ = {
 			isa = PBXGroup;
 			children = (
+				65B2CCE3200E8C0900A47A06 /* redwine.jpg */,
 				65B2CCCE200E87FF00A47A06 /* AppDelegate.swift */,
-				65B2CCD0200E87FF00A47A06 /* ViewController.swift */,
+				65B2CCD0200E87FF00A47A06 /* CollectionViewController.swift */,
+				6500504A200E8DA7008E1CB9 /* CreateEntryViewController.swift */,
 				65B2CCD2200E87FF00A47A06 /* Main.storyboard */,
 				65B2CCD8200E87FF00A47A06 /* Assets.xcassets */,
 				65B2CCDA200E87FF00A47A06 /* LaunchScreen.storyboard */,
@@ -126,6 +132,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65B2CCE4200E8C0900A47A06 /* redwine.jpg in Resources */,
 				65B2CCDC200E87FF00A47A06 /* LaunchScreen.storyboard in Resources */,
 				65B2CCD9200E87FF00A47A06 /* Assets.xcassets in Resources */,
 				65B2CCD4200E87FF00A47A06 /* Main.storyboard in Resources */,
@@ -139,9 +146,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65B2CCD1200E87FF00A47A06 /* ViewController.swift in Sources */,
+				65B2CCD1200E87FF00A47A06 /* CollectionViewController.swift in Sources */,
 				65B2CCCF200E87FF00A47A06 /* AppDelegate.swift in Sources */,
 				65B2CCD7200E87FF00A47A06 /* wineCollector.xcdatamodeld in Sources */,
+				6500504B200E8DA7008E1CB9 /* CreateEntryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
