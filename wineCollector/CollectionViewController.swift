@@ -44,9 +44,20 @@ class CollectionViewController: UIViewController, UITableViewDelegate, UITableVi
 		
 		let wine = wines[indexPath.row] // Customization
 		cell.textLabel?.text = wine.type
-		cell.imageView?.image = UIImage(data: wine.image as! Data) // Need to reconvert from PNG to UIImage
+		cell.imageView?.image = UIImage(data: wine.image as Data!) // Need to reconvert from PNG to UIImage
 		
 		return cell
+	}
+	
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		let wine = wines[indexPath.row]
+		performSegue(withIdentifier: "addSegue", sender: wine)
+		
+	}
+	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		let nextVC = segue.destination as! CreateEntryViewController
+		nextVC.wine = sender as? Wine
 	}
 	
 }

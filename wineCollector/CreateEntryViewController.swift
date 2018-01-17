@@ -9,16 +9,28 @@
 import UIKit
 
 class CreateEntryViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+	@IBOutlet weak var addUpdateButton: UIButton!
 	@IBOutlet weak var imageView: UIImageView!
 	@IBOutlet weak var titleTextField: UITextField!
+	@IBOutlet weak var deleteButton: UIButton!
 	
 	var imagePicker = UIImagePickerController()
+	var wine : Wine? = nil
 	
     override func viewDidLoad() {
         super.viewDidLoad()
 		
 		imagePicker.delegate = self // delegate, like in tableView, an object uses a delegate to pull information it needs
 
+		if wine != nil {
+			imageView.image = UIImage(data: wine!.image as! Data)
+			titleTextField.text = wine!.type
+			
+			addUpdateButton.setTitle("Update", for: .normal)
+		} else {
+			deleteButton.isHidden = true
+		}
+		
 	}
 	
 	@IBAction func photosTapped(_ sender: Any) {
@@ -39,10 +51,19 @@ class CreateEntryViewController: UIViewController, UIImagePickerControllerDelega
 	
 	@IBAction func cameraTapped(_ sender: Any) {
 	
+		imagePicker.sourceType = .camera
+		
 	}
 	
 	@IBAction func addTapped(_ sender: Any) {
 	
+		if wine != nil {
+		
+			wine!.type = titleTextField.text
+			wine!.image = UIImagePNGRepresentation(imageView.image!)
+			
+		} else {
+		
 		let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 		
 		let wine = Wine(context: context)
@@ -51,6 +72,19 @@ class CreateEntryViewController: UIViewController, UIImagePickerControllerDelega
 		// Turn image into PNG
 		
 		wine.image = UIImagePNGRepresentation(imageView.image!)
+		
+		}
+			
+		(UIApplication.shared.delegate as! AppDelegate).saveContext()
+		
+		navigationController!.popViewController(animated: true)
+		
+	}
+	
+	@IBAction func deleteTapped(_ sender: Any) {
+		let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+		
+		context.delete(wine!)
 		
 		(UIApplication.shared.delegate as! AppDelegate).saveContext()
 		
